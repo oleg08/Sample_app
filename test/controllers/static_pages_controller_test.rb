@@ -5,10 +5,10 @@ class StaticPagesControllerTest < ActionController::TestCase
     @base_title = 'Ruby on Rails Tutorial Sample App'
   end
 
-  test 'hould get home' do
+  test 'should get home' do
     get :home
     assert_response :success
-    assert_select 'title'" | #{@base_title}"
+    assert_select 'title', "#{@base_title}"
   end
 
   test 'should get help' do
